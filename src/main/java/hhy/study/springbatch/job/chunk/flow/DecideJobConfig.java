@@ -29,7 +29,7 @@ import java.util.Random;
  * @Purpose         : 흐름+분기를 가진 Spring Batch 형태
  * @Date            : 2020.03
  * @Author          : 한혜연
- * @Comment         : 복잡도가 중간인 배치 프로그램에서 사용할 것, success/fail 에 따른 분기가 가능, 조건에 따라서 분기 가능
+ * @Comment         : success/fail 에 따른 분기가 가능, 조건에 따라서 분기 가능
  */
 
 @Configuration

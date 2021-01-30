@@ -21,6 +21,7 @@ import org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor;
 import org.springframework.batch.item.file.transform.DelimitedLineAggregator;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.batch.repeat.RepeatStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +33,7 @@ import org.springframework.core.io.Resource;
  * @Purpose         : 단일 세부 작업 단위 Spring Batch 형태, 거의 사용하지 않는 추세
  * @Date            : 2020.03
  * @Author          : 한혜연
- * @Comment         : 복잡하고/중요할수록/정형화될수록 CHUNK 방식 선택할 것, 어떤방식인지 공부는 해두자
+ * @Comment         : 복잡하고/중요할수록/정형화될수록 CHUNK 방식 선택할 것
  */
 
 @Configuration
@@ -43,6 +44,7 @@ public class TaskletJobConfig {
     JobBuilderFactory jobBuilderFactory;
     StepBuilderFactory stepBuilderFactory;
 
+    @Autowired
     public TaskletJobConfig(JobBuilderFactory jobBuilderFactory, StepBuilderFactory stepBuilderFactory) {
         this.jobBuilderFactory = jobBuilderFactory;
         this.stepBuilderFactory = stepBuilderFactory;

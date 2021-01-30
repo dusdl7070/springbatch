@@ -27,7 +27,8 @@ import org.springframework.core.io.Resource;
  * @Purpose         : 흐름을 가진 Spring Batch 형태
  * @Date            : 2020.03
  * @Author          : 한혜연
- * @Comment         : 복잡도가 중간인 배치 프로그램에서 사용할 것, success/fail 에 따른 분기가 가능
+ * @Comment         : 복잡도가 중간인 배치 프로그램에서 사용할 것, success/fail 에 따른 분기가 가능,
+ *                    fail 상황을 control 할 경우 커스텀해서 사용하자
  */
 
 @Configuration
